@@ -6,6 +6,8 @@ Un assistant de débogage intelligent pour Unity intégrant n8n et Docker | Inte
 
 [![Unity](https://img.shields.io/badge/Unity-2022.3+-black?logo=unity)](https://unity.com/)
 [![n8n](https://img.shields.io/badge/n8n-Workflow_Automation-orange?logo=n8n)](https://n8n.io/)
+
+
 [![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://www.docker.com/)
 
 **Ange Gardien IA** est un outil de productivité pour développeurs Unity. Il capture les erreurs de la console en temps réel et utilise un agent IA (via n8n) pour fournir des analyses contextuelles et des solutions immédiates directement dans l'éditeur.
@@ -62,7 +64,11 @@ Prévention : Un conseil d'expert pour améliorer la stabilité du code.
 
 [ ] History Log : Archivage des solutions proposées durant la session.
 
-👨‍💻 Auteur
-aminata-sane / [Mon LinkedIn](https://www.linkedin.com/in/aminata-constance-san%C3%A9-82897a33a/?originalSubdomain=fr) - [Mon Portfolio](https://aminata-constance-sane.students-laplateforme.io/)
+---
+
+👨‍💻 Auteur:
+aminata-sane
+
+[Mon LinkedIn](https://www.linkedin.com/in/aminata-constance-san%C3%A9-82897a33a/?originalSubdomain=fr) - [Mon Portfolio](https://aminata-constance-sane.students-laplateforme.io/)
 
 ---

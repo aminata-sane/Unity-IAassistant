@@ -97,4 +97,14 @@ public class AIAssistant : EditorWindow
     public class ErrorData { public string message; public string details; }
 }
 
-// Classe Coroutine inchangée
+public static class StaticEditorCoroutine {
+    public static void Start(IEnumerator coroutine) {
+        EditorApplication.CallbackFunction callback = null;
+        callback = () => { 
+            if (!coroutine.MoveNext()) {
+                EditorApplication.update -= callback; 
+            }
+        };
+        EditorApplication.update += callback;
+    }
+}

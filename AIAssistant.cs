@@ -62,8 +62,14 @@ public class AIAssistant : EditorWindow
     }
 
     void HandleLog(string logString, string stackTrace, LogType type) {
+        // 1. On ne traite que les erreurs
         if (type != LogType.Error && type != LogType.Exception) return;
-        if (logString.Contains("CONTREMAÎTRE") || logString.Contains("n8n")) return;
+        
+        // 2. IMPORTANT : Si on est déjà en train de parler à l'IA, on n'envoie RIEN d'autre
+        if (isProcessing) return; 
+
+        // 3. On ignore les messages qui viennent de notre propre système
+        if (logString.Contains("CONTREMAÎTRE") || logString.Contains("DÉBOGAGE RÉSEAU")) return;
 
         lastAiResponse = "🧘 Le Maître Zen analyse votre erreur...";
         StaticEditorCoroutine.Start(SendErrorToN8N(logString, stackTrace));

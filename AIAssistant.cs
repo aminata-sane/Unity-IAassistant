@@ -86,6 +86,8 @@ public class AIAssistant : EditorWindow
             lastAiResponse = request.downloadHandler.text;
             Repaint(); // Force la mise à jour de la fenêtre
         } else {
+            // Cela va nous dire dans la console Unity si c'est "Connection Refused" ou "Timeout"
+            Debug.LogError($"[DÉBOGAGE RÉSEAU] Code: {request.responseCode} | Erreur: {request.error}");
             lastAiResponse = "<color=red>Erreur de connexion avec n8n.</color>\n" + request.error;
         }
         
